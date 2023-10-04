@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>
+      Rock Paper Scissors
+      </title>
+
+      <link rel="stylesheet" href="styles/12-rock-paper-scissors.css">
+
+  </head>
+ 
+  <body>
+
+<!--------------------------------BUTTON 1 (ROCK)---------------------------------->
+    <p class="title">Rock Paper Scissors</p>
+
+    <button class= "move-button js-rock-button">
+    <img src="images/rock-emoji.png" class="move-icon"></button>
+
+<!--------------------------------BUTTON 2(PAPER)--------------------------------->
+
+    <button class= "move-button js-paper-button">
+    <img src="images/paper-emoji.png" class="move-icon"></button>
+
+
+<!--------------------------------BUTTON 3(SCISSORS)------------------------------>
+    <button class= "move-button js-scissors-button">
+    <img src="images/scissors-emoji.png" class="move-icon"></button>
+
+<!--------------------------------BUTTON 4(PARAGRAPH)------------------------------>
+
+     <p class="js-result result"></p>
+
+<!--------------------------------BUTTON 5(PARAGRAPH)------------------------------>
+
+     <p class="js-moves"></p> 
+
+<!--------------------------------BUTTON 6(PARAGRAPH)------------------------------>
+
+     <p class="js-score score"></p>
+
+<!--------------------------------BUTTON 7(RESET)--------------------------------->
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+    " class="reset-score-button">Reset Score</button>
+
+    <button class="auto-play-button" onclick="
+    autoplay();
+    ">Auto Play</button>
+
+
+      <script src ="scripts/12-rock-paper-scissors.js"></script>
+  </body>
+</html>
